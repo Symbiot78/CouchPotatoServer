@@ -782,7 +782,7 @@ class Scanner(Plugin):
         if not file_size: file_size = []
 
         try:
-            return file_size.get('min', 0) < self.getFileSize(file) < file_size.get('max', 100000)
+            return file_size.get('min', 0) < self.getFileSize(file) < file_size.get('max', 999999)
         except:
             log.error('Couldn\'t get filesize of %s.', file)
 
